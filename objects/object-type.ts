@@ -27,7 +27,7 @@ console.log(addCourse({ title: '', duration: 5, price: 99.45 }));
 
 type Product = {
     // readonly is used when you don't want someone to change the value of that field.
-    _id: readonly string[];
+    readonly _id: string[];
     name: string;
     price: number;
     quantity: number
@@ -42,7 +42,11 @@ let newPr: Product = {
 }
 
 newPr.price = 47
-// newPr._id.push('6')
+/*We can push elements to read-only properties having type array; 
+because arrays are not explicitly represented, but only by their memory address. 
+So, technically we are not changing the memory address of array by pushing elements inside it, 
+and READONLY still validates upon the address of the array. */
+newPr._id.push('6')
 console.log(newPr);
 
 type transaction = {
