@@ -12,5 +12,18 @@ let newUser = {name: 'Akash', age: 21}
 console.log(createUser(newUser));
 console.log(addUser());
 
+// type alias
+type Course = {
+    title: string;
+    duration: number;
+    price: number;
+}
+
+function addCourse(crs: Course): Course{
+    return {title: '', duration: 5, price: 99.45}
+}
+
+console.log(addCourse({title: '', duration: 5, price: 99.45}));
+
 
 export {}
