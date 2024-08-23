@@ -57,5 +57,4 @@ type fullProduct = Product & transaction & {
     hasDiscount: boolean
 }
 
-
 export { }

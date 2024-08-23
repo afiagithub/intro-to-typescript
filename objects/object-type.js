@@ -23,5 +23,9 @@ var newPr = {
     quantity: 125
 };
 newPr.price = 47;
-// newPr._id.push('6')
+/*We can push elements to read-only properties having type array;
+because arrays are not explicitly represented, but only by their memory address.
+So, technically we are not changing the memory address of array by pushing elements inside it,
+and READONLY still validates upon the address of the array. */
+newPr._id.push('6');
 console.log(newPr);

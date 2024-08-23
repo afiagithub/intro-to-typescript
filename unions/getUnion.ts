@@ -36,3 +36,25 @@ unionFunc('Hi Bye')
 let seatAllotment: 'aisle' | 'middle' | 'window' = 'aisle'
 // seatAllotment = 'lot'
 seatAllotment = 'middle'
+
+// union type in object
+type Shape = 
+  | { kind: "circle"; radius: number }
+  | { kind: "square"; sideLength: number };
+
+function area(shape: Shape) {
+  if (shape.kind === "circle") {
+    return Math.PI * shape.radius ** 2;
+  } else {
+    return shape.sideLength ** 2;
+  }
+}
+
+const myCircle: Shape = { kind: "circle", radius: 10 };
+const mySquare: Shape = { kind: "square", sideLength: 5 };
+
+console.log(area(myCircle)); // Output: 314.159...
+console.log(area(mySquare)); // Output: 25
+
+let mixArr: (string | number)[] = [1, 2, 'koli']
+console.log(mixArr);

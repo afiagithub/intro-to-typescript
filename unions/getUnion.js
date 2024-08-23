@@ -22,3 +22,17 @@ unionFunc('Hi Bye');
 var seatAllotment = 'aisle';
 // seatAllotment = 'lot'
 seatAllotment = 'middle';
+function area(shape) {
+    if (shape.kind === "circle") {
+        return Math.PI * Math.pow(shape.radius, 2);
+    }
+    else {
+        return Math.pow(shape.sideLength, 2);
+    }
+}
+var myCircle = { kind: "circle", radius: 10 };
+var mySquare = { kind: "square", sideLength: 5 };
+console.log(area(myCircle)); // Output: 314.159...
+console.log(area(mySquare)); // Output: 25
+var mixArr = [1, 2, 'koli'];
+console.log(mixArr);
