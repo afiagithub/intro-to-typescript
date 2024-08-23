@@ -29,3 +29,13 @@ So, technically we are not changing the memory address of array by pushing eleme
 and READONLY still validates upon the address of the array. */
 newPr._id.push('6');
 console.log(newPr);
+var newProduct = {
+    prid: 1,
+    startDate: function () {
+        return '2024-08-21';
+    },
+    // name and coupon is the same
+    getDiscount: function (name) {
+        return 0.5;
+    }
+};

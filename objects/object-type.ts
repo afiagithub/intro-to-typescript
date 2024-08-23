@@ -57,4 +57,22 @@ type fullProduct = Product & transaction & {
     hasDiscount: boolean
 }
 
+
+interface NewMethod{
+    readonly prid: number;
+    price?: number;
+    startDate(): string;
+    getDiscount(coupon: string): number;
+}
+
+const newProduct: NewMethod = {
+    prid: 1,
+    startDate: () => {
+        return '2024-08-21'
+    },
+    // name and coupon is the same
+    getDiscount(name: 'fresh10'){
+        return 0.5
+    }
+}
 export { }
